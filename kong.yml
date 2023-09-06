@@ -1,0 +1,28 @@
+_format_version: "2.1"
+
+services:
+  - name: auth
+    url: http://192.168.1.207:7880
+    routes:
+      - paths:
+          - /auth/api
+  - name: merchant
+    url: http://192.168.1.214:9966
+    routes:
+      - paths:
+          - /merchant/api
+  - name: wallet
+    url: http://192.168.1.214:3333
+    routes:
+      - paths:
+          - /wallet/api
+  - name: transaction
+    url: http://192.168.1.214:7766
+    routes:
+      - paths:
+          - /transaction/api
+  - name: auth-merchant
+    url: http://192.168.1.214:7879
+    routes:
+      - paths:
+          - /auth-merchant/api
